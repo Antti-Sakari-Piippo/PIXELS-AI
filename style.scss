@@ -9,10 +9,11 @@
 }
 
 $bg-clr: #331e41;
+$footer-color: #181531;
 $section-margin: 6rem;
 $content-width: min(100% - 2rem, 1550px);
 $content-width-low: min(100% - 2rem, 80%);
-$content-width-very-low: min(100% - 2rem, 65%);
+$content-width-very-low: min(100% - 2rem, 80%);
 $content-width-footer: min(100% - 2rem, 1385px);
 $menu-color: #302640;
 $gradient-color-1: rgba(255, 0, 139, 1);
@@ -22,7 +23,6 @@ $bg-color2: rgb(151, 71, 255);
 $dark-color1: rgba(255, 0, 139, 0.3);
 $dark-color2: rgba(151, 71, 255, 0.3);
 
-
 $bg-gradient: linear-gradient(0deg, rgba(54, 30, 69, 1) 0%, rgba(43, 29, 52, 1) 100%);
 
 $theme-gradient-vibrant: linear-gradient($gradient-color-1 0%, $gradient-color-2 100%);
@@ -31,10 +31,6 @@ $theme-gradient-dark: linear-gradient($dark-color1 0%, $dark-color2 100%);
 
 script {
   display: none !important;
-}
-
-i {
-  font-style: italic;
 }
 
 .col-container {
@@ -48,6 +44,10 @@ i {
   height: 100%;
 }
 
+i {
+  font-style: italic;
+}
+
 p {
   font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
   line-height: 1.4;
@@ -55,9 +55,6 @@ p {
 
 li {
   list-style-type: none;
-}
-
-.col-header {
 }
 
 .col-item {
@@ -83,6 +80,14 @@ input[type='reset'] {
   border: transparent;
 }
 
+input[type='email'] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.55rem;
+  color: black;
+  border-radius: 0.5rem;
+}
+
 ul {
   list-style: none;
 }
@@ -103,7 +108,6 @@ body {
   overflow-x: hidden;
 }
 
-// Link animation
 a {
   color: white;
   text-decoration: none;
@@ -133,7 +137,6 @@ a {
 .steps__points a {
   text-decoration: underline;
 }
-//
 
 section:not(:first-child, .ai-art) {
   padding-top: $section-margin;
@@ -144,9 +147,6 @@ section:not(:first-child, .ai-art) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-$footer-color: #221e3c;
-$footer-color: #181531;
 
 .special {
   padding: 0.5em 2em;
@@ -180,7 +180,7 @@ $footer-color: #181531;
 
 h1 {
   font-size: 9rem;
-  font-size: clamp(5rem, 4.3665rem + 2.8959vw, 9rem);
+  font-size: clamp(5rem, 5.0498rem + 4.3439vw, 12rem);
   letter-spacing: -5px;
   line-height: 1.2;
 }
@@ -243,9 +243,7 @@ video {
     opacity: 0.08;
     background-position: top;
     background-size: cover;
-    border-radius: 0 0 100% 100% / 0 0 100px 100px; /* Adjust the values to control the curve */
-    // border-radius: 100% / 150px; /* Adjust the values to control the curve */
-
+    border-radius: 0 0 100% 100% / 0 0 100px 100px;
   }
   nav {
     display: flex;
@@ -285,11 +283,9 @@ video {
 
   section.steps {
     display: flex;
-    justify-content: space-between;
-    width: $content-width;
     margin-inline: auto;
     align-items: center;
-    max-width: $content-width-very-low;
+    width: $content-width-very-low;
     .steps__how-does-it-work {
       .steps-container {
         position: relative;
@@ -351,7 +347,7 @@ video {
       grid-template-columns: repeat(4, 1fr);
       display: grid;
       gap: 0.3rem;
-      scale: 0.85;
+      scale: 0.9;
       max-width: 450px;
       img {
         border-radius: 0.5em;
@@ -435,7 +431,6 @@ section.user-stories {
       background: linear-gradient(to right, $bg-color1, $bg-color2);
       overflow: hidden; /* Clip the gradient border to the content */
 
-
       p {
         background: rgba($color: #000000, $alpha: 0.9);
         color: white;
@@ -476,24 +471,23 @@ input[type='submit'] {
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
-    }
-    span {
-      color: white;
-    }
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  span {
+    color: white;
+  }
 }
 
-a:focus{
-  outline: 2px solid $bg-color1; 
-}
-
-button:focus, input[type="submit"]:focus {
+a:focus {
   outline: 2px solid $bg-color1;
 }
 
-
+button:focus,
+input[type='submit']:focus {
+  outline: 2px solid $bg-color1;
+}
 
 section.ai-art {
   position: relative;
@@ -536,8 +530,8 @@ section.ai-art {
 
 section.editor {
   width: 100%;
-  background-color:#1C1B34;
-  background-color: rgba($color: #1C1B34, $alpha: 0.6);
+  background-color: #1c1b34;
+  background-color: rgba($color: #1c1b34, $alpha: 0.6);
   border-radius: 90% 90% 0 0 / 80px 80px 0 0; /* Adjust the values to control the curve */
   .editor-container {
     display: grid;
@@ -578,12 +572,6 @@ section.footer {
       margin-bottom: 0.9rem;
     }
     h5.logo {
-    }
-
-    input[type='email'] {
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      color: black;
     }
 
     a,
@@ -743,7 +731,7 @@ section.questions {
   }
 }
 
-@media only screen and (400px < width < 500px ) {
+@media only screen and (400px < width < 500px) {
   section.user-stories {
     padding-top: 10rem;
   }

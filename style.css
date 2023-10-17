@@ -12,10 +12,6 @@ script {
   display: none !important;
 }
 
-i {
-  font-style: italic;
-}
-
 .col-container {
   display: grid;
   gap: 1.8rem;
@@ -24,6 +20,10 @@ i {
 
 .col {
   height: 100%;
+}
+
+i {
+  font-style: italic;
 }
 
 p {
@@ -56,6 +56,14 @@ input[type=reset] {
   cursor: pointer;
   outline: inherit;
   border: transparent;
+}
+
+input[type=email] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.55rem;
+  color: black;
+  border-radius: 0.5rem;
 }
 
 ul {
@@ -150,7 +158,7 @@ section:not(:first-child, .ai-art) {
 
 h1 {
   font-size: 9rem;
-  font-size: clamp(5rem, 4.3665rem + 2.8959vw, 9rem);
+  font-size: clamp(5rem, 5.0498rem + 4.3439vw, 12rem);
   letter-spacing: -5px;
   line-height: 1.2;
 }
@@ -212,7 +220,7 @@ video {
   opacity: 0.08;
   background-position: top;
   background-size: cover;
-  border-radius: 0 0 100% 100%/0 0 100px 100px; /* Adjust the values to control the curve */
+  border-radius: 0 0 100% 100%/0 0 100px 100px;
 }
 .bg nav {
   display: flex;
@@ -245,11 +253,9 @@ video {
 }
 .bg section.steps {
   display: flex;
-  justify-content: space-between;
-  width: min(100% - 2rem, 1550px);
   margin-inline: auto;
   align-items: center;
-  max-width: min(100% - 2rem, 65%);
+  width: min(100% - 2rem, 80%);
 }
 .bg section.steps .steps__how-does-it-work .steps-container {
   position: relative;
@@ -301,7 +307,7 @@ video {
   grid-template-columns: repeat(4, 1fr);
   display: grid;
   gap: 0.3rem;
-  scale: 0.85;
+  scale: 0.9;
   max-width: 450px;
 }
 .bg section.steps .steps__showcase img {
@@ -431,7 +437,8 @@ a:focus {
   outline: 2px solid rgb(255, 0, 139);
 }
 
-button:focus, input[type=submit]:focus {
+button:focus,
+input[type=submit]:focus {
   outline: 2px solid rgb(255, 0, 139);
 }
 
@@ -477,7 +484,7 @@ section.ai-art .ai-art__bg img.ai-art__bg__img {
 
 section.editor {
   width: 100%;
-  background-color: #1C1B34;
+  background-color: #1c1b34;
   background-color: rgba(28, 27, 52, 0.6);
   border-radius: 90% 90% 0 0/80px 80px 0 0; /* Adjust the values to control the curve */
 }
@@ -514,11 +521,6 @@ section.footer .footer__content img {
 }
 section.footer .footer__content h5 {
   margin-bottom: 0.9rem;
-}
-section.footer .footer__content input[type=email] {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  color: black;
 }
 section.footer .footer__content a,
 section.footer .footer__content p {

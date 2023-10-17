@@ -8,13 +8,14 @@
   font: inherit;
 }
 
-$bg-clr: #331e41;
-$footer-color: #181531;
+// Widths
 $section-margin: 6rem;
 $content-width: min(100% - 2rem, 1550px);
 $content-width-low: min(100% - 2rem, 80%);
-$content-width-very-low: min(100% - 2rem, 80%);
-$content-width-footer: min(100% - 2rem, 1385px);
+
+// Colors
+$bg-clr: #331e41;
+$footer-color: #181531;
 $menu-color: #302640;
 $gradient-color-1: rgba(255, 0, 139, 1);
 $gradient-color-2: rgba(151, 71, 255, 1);
@@ -23,12 +24,12 @@ $bg-color2: rgb(151, 71, 255);
 $dark-color1: rgba(255, 0, 139, 0.3);
 $dark-color2: rgba(151, 71, 255, 0.3);
 
+// Gradients
 $bg-gradient: linear-gradient(0deg, rgba(54, 30, 69, 1) 0%, rgba(43, 29, 52, 1) 100%);
-
 $theme-gradient-vibrant: linear-gradient($gradient-color-1 0%, $gradient-color-2 100%);
-
 $theme-gradient-dark: linear-gradient($dark-color1 0%, $dark-color2 100%);
 
+// Utilities, Global
 script {
   display: none !important;
 }
@@ -44,98 +45,27 @@ script {
   height: 100%;
 }
 
-i {
-  font-style: italic;
-}
-
-p {
-  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
-  line-height: 1.4;
-}
-
-li {
-  list-style-type: none;
-}
-
 .col-item {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.4rem;
 }
 
-button,
-input {
-  border: none;
+.hamburger {
+  font-size: 3rem;
+  z-index: 999999;
 }
 
-button,
-input[type='reset'] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
+#navToggle {
   cursor: pointer;
-  outline: inherit;
-  border: transparent;
-}
-
-input[type='email'] {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  padding-bottom: 0.55rem;
-  color: black;
-  border-radius: 0.5rem;
-}
-
-ul {
-  list-style: none;
-}
-
-img,
-svg,
-image {
-  display: block;
-  object-fit: contain;
-  max-width: 100%;
-  height: 100%;
-}
-
-body {
-  background: $bg-gradient;
-  margin-inline: auto;
-  font-family: 'K2D', sans-serif;
-  overflow-x: hidden;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-  cursor: pointer;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: $gradient-color-1;
-    transition: width 0.3s ease;
+  display: none;
+  &[aria-expanded='true'] + #navMenu {
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 300px;
+    flex-direction: column;
   }
-
-  &:hover {
-    color: $gradient-color-1;
-  }
-
-  &:hover:before {
-    width: 100%;
-  }
-}
-
-.steps__points a {
-  text-decoration: underline;
 }
 
 section:not(:first-child, .ai-art) {
@@ -178,6 +108,115 @@ section:not(:first-child, .ai-art) {
   }
 }
 
+button,
+input[type='submit'] {
+  height: fit-content;
+  width: fit-content;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  span {
+    color: white;
+  }
+}
+
+button,
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border: transparent;
+}
+
+input[type='email'] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.55rem;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+body {
+  background: $bg-gradient;
+  margin-inline: auto;
+  font-family: 'K2D', sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input {
+  border: none;
+}
+
+i {
+  font-style: italic;
+}
+
+p {
+  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
+  line-height: 1.4;
+}
+
+li {
+  list-style-type: none;
+}
+
+button:focus,
+input[type='submit']:focus {
+  outline: 2px solid $bg-color1;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg,
+image {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+}
+
+a:focus {
+  outline: 2px solid $bg-color1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $gradient-color-1;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: $gradient-color-1;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
+
 h1 {
   font-size: 9rem;
   font-size: clamp(3.7rem, 4.7rem + 4vw, 12rem);
@@ -185,11 +224,16 @@ h1 {
   line-height: 1.2;
 }
 
+.container h1 {
+  color: #fff;
+  text-align: center;
+}
+
 h2 {
   font-size: 2.9rem;
   font-size: clamp(2.2rem, 2.2891rem + 0.5068vw, 3.2rem);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.9rem;
 }
 
 h3 {
@@ -229,7 +273,7 @@ video {
   object-fit: cover;
 }
 
-// NAVIGATION
+// HERO SECTION
 .bg {
   &::before {
     content: '';
@@ -274,18 +318,17 @@ video {
     margin-inline: auto;
     padding-bottom: 7rem;
     margin-top: 15rem;
-    h1 {
-    }
     h2 {
       max-width: 30ch;
     }
   }
 
+  //STEPS SECTION
   section.steps {
     display: flex;
     margin-inline: auto;
     align-items: center;
-    width: $content-width-very-low;
+    width: $content-width-low;
     .steps__how-does-it-work {
       .steps-container {
         position: relative;
@@ -294,9 +337,10 @@ video {
         p {
           max-width: 46ch;
         }
-        .steps__header {
-        }
         .steps__points {
+          a {
+            text-decoration: underline;
+          }
           .steps__points__step {
             .steps__points__step__line {
               .ball {
@@ -358,63 +402,11 @@ video {
   }
 }
 
-#navToggle {
-  cursor: pointer;
-  display: none;
-  &[aria-expanded='true'] + #navMenu {
-    display: flex;
-    top: 0;
-    right: 0;
-    width: 300px;
-    flex-direction: column;
-  }
-}
-
-/* Media query for the hamburger menu */
-@media screen and (max-width: 1100px) {
-  #navMenu {
-    list-style: none;
-    text-align: center;
-    padding: 2.2rem 0;
-    position: absolute;
-    right: -300px;
-    width: 300px;
-    background-color: rgba($color: $menu-color, $alpha: 0.9);
-    flex-direction: column;
-    transition: right 0.3s;
-    border-radius: 2rem 0rem 2rem 2rem;
-  }
-
-  #navMenu[aria-expanded='true'] {
-    right: 0;
-  }
-
-  .bg nav {
-    top: 0;
-    right: 0;
-  }
-
-  #navToggle {
-    z-index: 999999;
-    display: block;
-    position: absolute;
-    right: 2rem;
-  }
-}
-
-/* Add styles for the hamburger icon */
-.hamburger {
-  font-size: 3rem;
-  z-index: 99999999999;
-}
-////
-
+// USER STORIES SECTION
 section.user-stories {
   width: min(100% - 2rem, 1550px);
   margin-inline: auto;
   margin-top: 4.5rem;
-  h3 {
-  }
   .user-stories__cards {
     $--__padding: 1.9em;
     display: grid;
@@ -429,7 +421,7 @@ section.user-stories {
       position: relative;
       padding: 4px;
       background: linear-gradient(to right, $bg-color1, $bg-color2);
-      overflow: hidden; /* Clip the gradient border to the content */
+      overflow: hidden;
 
       p {
         background: rgba($color: #000000, $alpha: 0.9);
@@ -464,31 +456,7 @@ section.user-stories {
   }
 }
 
-button,
-input[type='submit'] {
-  height: fit-content;
-  width: fit-content;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-  }
-  span {
-    color: white;
-  }
-}
-
-a:focus {
-  outline: 2px solid $bg-color1;
-}
-
-button:focus,
-input[type='submit']:focus {
-  outline: 2px solid $bg-color1;
-}
-
+// AI ART SECTION
 section.ai-art {
   position: relative;
   display: flex;
@@ -528,11 +496,12 @@ section.ai-art {
   }
 }
 
+// EDITOR SECTION
 section.editor {
   width: 100%;
   background-color: #1c1b34;
   background-color: rgba($color: #1c1b34, $alpha: 0.6);
-  border-radius: 90% 90% 0 0 / 80px 80px 0 0; /* Adjust the values to control the curve */
+  border-radius: 90% 90% 0 0 / 80px 80px 0 0;
   .editor-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -542,8 +511,6 @@ section.editor {
     align-items: center;
     gap: 2.7rem;
     .editor__texts {
-      h2 {
-      }
       p {
         font-size: clamp(0.9rem, 0.7891rem + 0.5068vw, 1.6rem);
       }
@@ -557,6 +524,7 @@ section.editor {
   }
 }
 
+// FOOTER SECTION
 section.footer {
   background-color: rgba($color: $footer-color, $alpha: 0.7);
   .footer__content {
@@ -568,48 +536,23 @@ section.footer {
       margin-top: 0.3rem;
       object-fit: contain;
     }
-
     h5 {
       margin-bottom: 0.9rem;
-    }
-    h5.logo {
     }
     .col-items {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
     }
-
     a,
     p {
-      font-size: 1rem !important;
       line-height: 1.6;
       max-width: 18ch;
     }
   }
 }
 
-h4.faq-page::after {
-  position: absolute;
-  content: '';
-  background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
-  background-position: center, right, bottom;
-  background-repeat: no-repeat;
-  display: inline-block;
-  right: 0.5rem;
-  top: 0.19rem;
-  border-radius: 50%;
-  width: 2.2rem;
-  padding: 2.2rem;
-  scale: 0.6;
-  height: 2.2rem;
-  aspect-ratio: 1;
-}
-
-.faq-page.rotate::after {
-  rotate: 180deg;
-}
-
+// QUESTION SECTION
 section.questions {
   width: $content-width;
   margin-inline: auto;
@@ -642,68 +585,69 @@ section.questions {
       }
       h4.faq-page::after {
         transition: ease-in-out 0.2s;
+        position: absolute;
+        content: '';
+        background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
+        background-position: center, right, bottom;
+        background-repeat: no-repeat;
+        display: inline-block;
+        right: 0.5rem;
+        top: 0.19rem;
+        border-radius: 50%;
+        width: 2.2rem;
+        padding: 2.2rem;
+        scale: 0.6;
+        height: 2.2rem;
+        aspect-ratio: 1;
       }
     }
   }
 }
-
-.dropdown {
-  background: $theme-gradient-vibrant;
-  display: inline-block;
-  right: 1.2rem;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h4.faq-page.rotate::after {
+  rotate: 180deg;
 }
-
-///////////ACCORIDONG
-// FAQ
 .faq-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-
 .faq-body.active {
   max-height: 500px;
 }
-.container h1 {
-  color: #fff;
-  text-align: center;
-}
-
-// details {
-//   background-color: #303030;
-//   color: #fff;
-//   font-size: 1.5rem;
-// }
-
-// summary {
-//   padding: 0.5em 1.3rem;
-//   list-style: none;
-//   display: flex;
-//   justify-content: space-between;
-//   transition: height 1s ease;
-// }
-
-// summary::-webkit-details-marker {
-//   display: none;
-// }
-
-// details[open] summary {
-//   border-bottom: 1px solid #aaa;
-//   margin-bottom: 0.5em;
-// }
-
-// details[open] div {
-//   padding: 0.5em 1em;
-// }
+// END OF QUESTION SECTION
 
 // MEDIA QUERIES
+@media screen and (max-width: 1100px) {
+  #navMenu {
+    list-style: none;
+    text-align: center;
+    padding: 2.2rem 0;
+    position: absolute;
+    right: -300px;
+    width: 300px;
+    background-color: rgba($color: $menu-color, $alpha: 0.9);
+    flex-direction: column;
+    transition: right 0.3s;
+    border-radius: 2rem 0rem 2rem 2rem;
+  }
+
+  #navMenu[aria-expanded='true'] {
+    right: 0;
+  }
+
+  .bg nav {
+    top: 0;
+    right: 0;
+  }
+
+  #navToggle {
+    z-index: 999999;
+    display: block;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
 @media only screen and (width < 1100px) {
   .steps__showcase {
     display: none !important;
@@ -714,7 +658,7 @@ section.questions {
   }
 }
 
-@media only screen and (width < 700px) {
+@media only screen and (width <= 700px) {
   h4.faq-page::after {
     top: -0.2rem;
   }
@@ -725,7 +669,7 @@ section.questions {
     padding-top: 14rem;
   }
 }
-@media only screen and (width < 400px) {
+@media only screen and (width <= 400px) {
   h4.faq-page::after {
     display: none;
   }
@@ -737,7 +681,7 @@ section.questions {
   }
 }
 
-@media only screen and (400px < width < 500px) {
+@media only screen and (400px <= width <= 500px) {
   section.user-stories {
     padding-top: 10rem;
   }

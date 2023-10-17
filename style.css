@@ -22,97 +22,27 @@ script {
   height: 100%;
 }
 
-i {
-  font-style: italic;
-}
-
-p {
-  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
-  line-height: 1.4;
-}
-
-li {
-  list-style-type: none;
-}
-
 .col-item {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.4rem;
 }
 
-button,
-input {
-  border: none;
+.hamburger {
+  font-size: 3rem;
+  z-index: 999999;
 }
 
-button,
-input[type=reset] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
+#navToggle {
   cursor: pointer;
-  outline: inherit;
-  border: transparent;
+  display: none;
 }
-
-input[type=email] {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  padding-bottom: 0.55rem;
-  color: black;
-  border-radius: 0.5rem;
-}
-
-ul {
-  list-style: none;
-}
-
-img,
-svg,
-image {
-  display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: 100%;
-  height: 100%;
-}
-
-body {
-  background: linear-gradient(0deg, rgb(54, 30, 69) 0%, rgb(43, 29, 52) 100%);
-  margin-inline: auto;
-  font-family: "K2D", sans-serif;
-  overflow-x: hidden;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255, 0, 139);
-  transition: width 0.3s ease;
-}
-a:hover {
-  color: rgb(255, 0, 139);
-}
-a:hover:before {
-  width: 100%;
-}
-
-.steps__points a {
-  text-decoration: underline;
+#navToggle[aria-expanded=true] + #navMenu {
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 300px;
+  flex-direction: column;
 }
 
 section:not(:first-child, .ai-art) {
@@ -156,6 +86,116 @@ section:not(:first-child, .ai-art) {
   margin-left: 0.7rem;
 }
 
+button,
+input[type=submit] {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover, button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  transform: scale(1.05);
+}
+button span,
+input[type=submit] span {
+  color: white;
+}
+
+button,
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border: transparent;
+}
+
+input[type=email] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.55rem;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+body {
+  background: linear-gradient(0deg, rgb(54, 30, 69) 0%, rgb(43, 29, 52) 100%);
+  margin-inline: auto;
+  font-family: "K2D", sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input {
+  border: none;
+}
+
+i {
+  font-style: italic;
+}
+
+p {
+  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
+  line-height: 1.4;
+}
+
+li {
+  list-style-type: none;
+}
+
+button:focus,
+input[type=submit]:focus {
+  outline: 2px solid rgb(255, 0, 139);
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg,
+image {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+}
+
+a:focus {
+  outline: 2px solid rgb(255, 0, 139);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 0, 139);
+  transition: width 0.3s ease;
+}
+a:hover {
+  color: rgb(255, 0, 139);
+}
+a:hover:before {
+  width: 100%;
+}
+
 h1 {
   font-size: 9rem;
   font-size: clamp(3.7rem, 4.7rem + 4vw, 12rem);
@@ -163,11 +203,16 @@ h1 {
   line-height: 1.2;
 }
 
+.container h1 {
+  color: #fff;
+  text-align: center;
+}
+
 h2 {
   font-size: 2.9rem;
   font-size: clamp(2.2rem, 2.2891rem + 0.5068vw, 3.2rem);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.9rem;
 }
 
 h3 {
@@ -265,6 +310,9 @@ video {
 .bg section.steps .steps__how-does-it-work .steps-container p {
   max-width: 46ch;
 }
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points a {
+  text-decoration: underline;
+}
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__line .ball {
   position: relative;
   height: 9px;
@@ -317,52 +365,6 @@ video {
      object-fit: cover;
 }
 
-#navToggle {
-  cursor: pointer;
-  display: none;
-}
-#navToggle[aria-expanded=true] + #navMenu {
-  display: flex;
-  top: 0;
-  right: 0;
-  width: 300px;
-  flex-direction: column;
-}
-
-/* Media query for the hamburger menu */
-@media screen and (max-width: 1100px) {
-  #navMenu {
-    list-style: none;
-    text-align: center;
-    padding: 2.2rem 0;
-    position: absolute;
-    right: -300px;
-    width: 300px;
-    background-color: rgba(48, 38, 64, 0.9);
-    flex-direction: column;
-    transition: right 0.3s;
-    border-radius: 2rem 0rem 2rem 2rem;
-  }
-  #navMenu[aria-expanded=true] {
-    right: 0;
-  }
-  .bg nav {
-    top: 0;
-    right: 0;
-  }
-  #navToggle {
-    z-index: 999999;
-    display: block;
-    position: absolute;
-    right: 2rem;
-  }
-}
-/* Add styles for the hamburger icon */
-.hamburger {
-  font-size: 3rem;
-  z-index: 99999999999;
-}
-
 section.user-stories {
   width: min(100% - 2rem, 1550px);
   margin-inline: auto;
@@ -382,7 +384,7 @@ section.user-stories .user-stories__cards .user-stories__card {
   position: relative;
   padding: 4px;
   background: linear-gradient(to right, rgb(255, 0, 139), rgb(151, 71, 255));
-  overflow: hidden; /* Clip the gradient border to the content */
+  overflow: hidden;
 }
 section.user-stories .user-stories__cards .user-stories__card p {
   background: rgba(0, 0, 0, 0.9);
@@ -413,33 +415,6 @@ section.user-stories .user-stories__cards .user-stories__card .user-stories__car
   aspect-ratio: 1;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-button,
-input[type=submit] {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-button:hover, button:focus,
-input[type=submit]:hover,
-input[type=submit]:focus {
-  transform: scale(1.05);
-}
-button span,
-input[type=submit] span {
-  color: white;
-}
-
-a:focus {
-  outline: 2px solid rgb(255, 0, 139);
-}
-
-button:focus,
-input[type=submit]:focus {
-  outline: 2px solid rgb(255, 0, 139);
 }
 
 section.ai-art {
@@ -486,7 +461,7 @@ section.editor {
   width: 100%;
   background-color: #1c1b34;
   background-color: rgba(28, 27, 52, 0.6);
-  border-radius: 90% 90% 0 0/80px 80px 0 0; /* Adjust the values to control the curve */
+  border-radius: 90% 90% 0 0/80px 80px 0 0;
 }
 section.editor .editor-container {
   display: grid;
@@ -531,30 +506,8 @@ section.footer .footer__content .col-items {
 }
 section.footer .footer__content a,
 section.footer .footer__content p {
-  font-size: 1rem !important;
   line-height: 1.6;
   max-width: 18ch;
-}
-
-h4.faq-page::after {
-  position: absolute;
-  content: "";
-  background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
-  background-position: center, right, bottom;
-  background-repeat: no-repeat;
-  display: inline-block;
-  right: 0.5rem;
-  top: 0.19rem;
-  border-radius: 50%;
-  width: 2.2rem;
-  padding: 2.2rem;
-  scale: 0.6;
-  height: 2.2rem;
-  aspect-ratio: 1;
-}
-
-.faq-page.rotate::after {
-  rotate: 180deg;
 }
 
 section.questions {
@@ -592,19 +545,24 @@ section.questions .questions-container .questions__item .questions__item__answer
 }
 section.questions .questions-container .questions__item h4.faq-page::after {
   transition: ease-in-out 0.2s;
+  position: absolute;
+  content: "";
+  background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
+  background-position: center, right, bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  right: 0.5rem;
+  top: 0.19rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  padding: 2.2rem;
+  scale: 0.6;
+  height: 2.2rem;
+  aspect-ratio: 1;
 }
 
-.dropdown {
-  background: linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
-  display: inline-block;
-  right: 1.2rem;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h4.faq-page.rotate::after {
+  rotate: 180deg;
 }
 
 .faq-body {
@@ -617,11 +575,33 @@ section.questions .questions-container .questions__item h4.faq-page::after {
   max-height: 500px;
 }
 
-.container h1 {
-  color: #fff;
-  text-align: center;
+@media screen and (max-width: 1100px) {
+  #navMenu {
+    list-style: none;
+    text-align: center;
+    padding: 2.2rem 0;
+    position: absolute;
+    right: -300px;
+    width: 300px;
+    background-color: rgba(48, 38, 64, 0.9);
+    flex-direction: column;
+    transition: right 0.3s;
+    border-radius: 2rem 0rem 2rem 2rem;
+  }
+  #navMenu[aria-expanded=true] {
+    right: 0;
+  }
+  .bg nav {
+    top: 0;
+    right: 0;
+  }
+  #navToggle {
+    z-index: 999999;
+    display: block;
+    position: absolute;
+    right: 2rem;
+  }
 }
-
 @media only screen and (width < 1100px) {
   .steps__showcase {
     display: none !important;
@@ -631,7 +611,7 @@ section.questions .questions-container .questions__item h4.faq-page::after {
     margin-top: 0;
   }
 }
-@media only screen and (width < 700px) {
+@media only screen and (width <= 700px) {
   h4.faq-page::after {
     top: -0.2rem;
   }
@@ -642,7 +622,7 @@ section.questions .questions-container .questions__item h4.faq-page::after {
     padding-top: 14rem;
   }
 }
-@media only screen and (width < 400px) {
+@media only screen and (width <= 400px) {
   h4.faq-page::after {
     display: none;
   }
@@ -653,7 +633,7 @@ section.questions .questions-container .questions__item h4.faq-page::after {
     padding-top: 0rem;
   }
 }
-@media only screen and (400px < width < 500px) {
+@media only screen and (400px <= width <= 500px) {
   section.user-stories {
     padding-top: 10rem;
   }

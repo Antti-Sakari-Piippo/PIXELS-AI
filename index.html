@@ -23,18 +23,19 @@
 </head>
 <body>
     <div class="bg">
-        <nav role="navigation">
-            <div id="navToggle" aria-controls="navMenu" aria-expanded="false">
-                <span class="hamburger theme-color">☰</span>
-            </div>
-            <ul id="navMenu">
+        <nav role="navigation" aria-label="Main navigation">
+            <button id="navToggle" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="hamburger theme-color" tabindex="0" role="button" aria-label="Open navigation menu">☰</span>
+            </button>
+            <ul id="navMenu" aria-labelledby="navToggle">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Create</a></li>
                 <li><a href="#">Features</a></li>
-                <li><button class="special">Connect Wallet</button></li>
+                <li><button class="special" aria-label="Connect Wallet">Connect Wallet</button></li>
             </ul>
         </nav>
+        
     <section class="bg-texts inline-margin">
         <h1 class="theme-color">PIXELS</h1>
         <h2>Transform Your Ideas into Striking Visuals with AI and Blockchain</h2>
@@ -49,7 +50,7 @@
                         <div class="steps__points__step__content">
                             <h4>STEP 1</h4>
                             <h4 class="theme-color">Connect your crypto wallet</h4>
-                            <p>Don't have a wallet? Get one from here <a>pixwallet.com</a></p>
+                            <p>Don't have a wallet? Get one from here <a tabindex="0">pixwallet.com</a></p>
                         </div>
                     </div>
                     <div class="steps__points__step">
@@ -88,97 +89,98 @@
             </div>
         </div>
         <div class="steps__showcase">
-            <img class="ai-art__bg__img" src="/images/brunet_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/bluehairAnime.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/flower_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/temple.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/dracula.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/clouds_gathering.webp" alt=""> 
-            <img class="ai-art__bg__img" src="/images/pixelLady2.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/ink_lady2.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/japanese_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/eastern_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/ink_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/vector_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/dark_queen.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/futuristic_car.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/gothic_castle.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/blonde_anime.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/blonde_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/temple_ruins.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/vietnamizeLake.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/placue_doctor.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/raven.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/golden-woman.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/pirate_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/futuristic.webp" alt="">
+            <img class="ai-art__bg__img" src="/images/brunet_lady.webp" alt="brunet_lady">
+            <img class="ai-art__bg__img" src="/images/bluehairAnime.webp" alt="bluehairAnime">
+            <img class="ai-art__bg__img" src="/images/flower_lady.webp" alt="flower_lady">
+            <img class="ai-art__bg__img" src="/images/temple.webp" alt="temple">
+            <img class="ai-art__bg__img" src="/images/dracula.webp" alt="dracula">
+            <img class="ai-art__bg__img" src="/images/clouds_gathering.webp" alt="clouds_gathering"> 
+            <img class="ai-art__bg__img" src="/images/pixelLady2.webp" alt="pixelLady">
+            <img class="ai-art__bg__img" src="/images/ink_lady2.webp" alt="ink_lady2">
+            <img class="ai-art__bg__img" src="/images/japanese_woman.webp" alt="japanese_woman">
+            <img class="ai-art__bg__img" src="/images/eastern_woman.webp" alt="eastern_woman">
+            <img class="ai-art__bg__img" src="/images/ink_lady.webp" alt="ink_lady">
+            <img class="ai-art__bg__img" src="/images/vector_lady.webp" alt="vector_lady">
+            <img class="ai-art__bg__img" src="/images/dark_queen.webp" alt="dark_queen">
+            <img class="ai-art__bg__img" src="/images/futuristic_car.webp" alt="futuristic_car">
+            <img class="ai-art__bg__img" src="/images/gothic_castle.webp" alt="gothic_castle">
+            <img class="ai-art__bg__img" src="/images/blonde_anime.webp" alt="blonde_anime">
+            <img class="ai-art__bg__img" src="/images/blonde_woman.webp" alt="blonde_woman">
+            <img class="ai-art__bg__img" src="/images/temple_ruins.webp" alt="temple_ruins">
+            <img class="ai-art__bg__img" src="/images/vietnamizeLake.webp" alt="vietnamizeLake">
+            <img class="ai-art__bg__img" src="/images/placue_doctor.webp" alt="placue_doctor">
+            <img class="ai-art__bg__img" src="/images/raven.webp" alt="raven">
+            <img class="ai-art__bg__img" src="/images/golden-woman.webp" alt="golden-woman">
+            <img class="ai-art__bg__img" src="/images/pirate_lady.webp" alt="pirate_lady">
+            <img class="ai-art__bg__img" src="/images/futuristic.webp" alt="futuristic">
         </div>
     </section>
+    </div>
     <section class="user-stories">
         <h3>What our users have said about <i class="theme-color">Pixels</i></h3>
         <div class="user-stories__cards">
                 <div class="user-stories__card">
-                        <p><img class="quotation-img" src="/icons/radix-icons_quote.svg"></img>I've always been fascinated by the intersection of art and technology. With Pixels AI Image Generator, I can explore my artistic vision in a whole new way. The customization options are incredible, allowing me to create images that match my exact specifications. It's a user-friendly platform that fuels my creativity.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
-                        <div class="user-stories__card__profile">
-                            <img src="/images/profile1.webp" alt="profile">
-                            <div class="user-stories__card__profile-container">
-                                <h4 class="theme-color">Sarah</h4>
-                                <h5>Graphic Designer</h5>
-                            </div>
+                    <p><img class="quotation-img" src="/icons/radix-icons_quote.svg" alt="quotation"></img>I've always been fascinated by the intersection of art and technology. With Pixels AI Image Generator, I can explore my artistic vision in a whole new way. The customization options are incredible, allowing me to create images that match my exact specifications. It's a user-friendly platform that fuels my creativity.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
+                    <div class="user-stories__card__profile">
+                        <img src="/images/profile1.webp" alt="user profile">
+                        <div class="user-stories__card__profile-container">
+                            <h4 class="theme-color">Sarah</h4>
+                            <h5>Graphic Designer</h5>
                         </div>
+                    </div>
                 </div>
                 <div class="user-stories__card">
-                        <p><img class="quotation-img" src="/icons/radix-icons_quote.svg"></img>Pixels AI Image Generator has completely transformed my workflow as a marketer. I can now create visually stunning images for my campaigns in a fraction of the time. The AI-generated results are consistently impressive, and the high-resolution output is perfect for both digital and print media.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
-                        <div class="user-stories__card__profile">
-                            <img src="/images/profile2.webp" alt="profile 2">
-                            <div class="user-stories__card__profile-container">
-                                <h4 class="theme-color">Mark</h4>
-                                <h5>Marketing Professional</h5>
-                            </div>
+                    <p><img class="quotation-img" src="/icons/radix-icons_quote.svg" alt="quotation"></img>Pixels AI Image Generator has completely transformed my workflow as a marketer. I can now create visually stunning images for my campaigns in a fraction of the time. The AI-generated results are consistently impressive, and the high-resolution output is perfect for both digital and print media.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
+                    <div class="user-stories__card__profile">
+                        <img src="/images/profile2.webp" alt="user profile 2">
+                        <div class="user-stories__card__profile-container">
+                            <h4 class="theme-color">Mark</h4>
+                            <h5>Marketing Professional</h5>
                         </div>
+                    </div>
                 </div>
                 <div class="user-stories__card">
-                        <p><img class="quotation-img" src="/icons/radix-icons_quote.svg"></img>Being an artist, Pixels AI Image Generator has become my go-to platform for exploring and experimenting with different artistic styles. The AI algorithms are truly remarkable, capturing the essence of various art movements. I love how I can generate unique images and share them with the vibrant Pixels community.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
-                        <div class="user-stories__card__profile">
-                            <img src="/images/profile3.webp" alt="profile 3">
-                            <div class="user-stories__card__profile-container">
-                                <h4 class="theme-color">Lydia</h4>
-                                <h5>Art Enthusiast</h5>
-                            </div>
+                    <p><img class="quotation-img" src="/icons/radix-icons_quote.svg" alt="quotation"></img>Being an artist, Pixels AI Image Generator has become my go-to platform for exploring and experimenting with different artistic styles. The AI algorithms are truly remarkable, capturing the essence of various art movements. I love how I can generate unique images and share them with the vibrant Pixels community.<img class="quotation-img" src="/icons/radix-icons_quote.svg"></img></p>
+                    <div class="user-stories__card__profile">
+                        <img src="/images/profile3.webp" alt="user profile 3">
+                        <div class="user-stories__card__profile-container">
+                            <h4 class="theme-color">Lydia</h4>
+                            <h5>Art Enthusiast</h5>
                         </div>
+                    </div>
             </div>
         </div>
     </section>
     <section class="ai-art">
         <div class="ai-art__community-text inline-margin">
             <h2>Share your masterpieces with the <i class="theme-color">Pixels</i> community</h2>
-            <button class="special large"><span>Showcase</span><img src="/icons/showcaseArror.svg"></button>
+            <button class="special large" aria-label="Showcase"><span aria-hidden="true">Showcase</span><img src="/icons/showcaseArror.svg" alt="Showcase arrow icon"></button>
         </div>
         <div class="ai-art__bg">
-            <img class="ai-art__bg__img" src="/images/blonde_anime.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/blonde_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/raven.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/temple_ruins.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/brunet_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/bluehairAnime.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/dracula.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/clouds_gathering.webp" alt=""> 
-            <img class="ai-art__bg__img" src="/images/dark_queen.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/eastern_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/flower_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/vietnamizeLake.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/gothic_castle.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/placue_doctor.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/ink_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/futuristic.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/pixelLady2.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/ink_lady2.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/japanese_beaty.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/futuristic_car.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/golden-woman.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/pirate_lady.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/temple.webp" alt="">
-            <img class="ai-art__bg__img" src="/images/vector_lady.webp" alt="">
+            <img class="ai-art__bg__img" src="/images/blonde_anime.webp" alt="blonde_anime">
+            <img class="ai-art__bg__img" src="/images/blonde_woman.webp" alt="blonde_woman">
+            <img class="ai-art__bg__img" src="/images/raven.webp" alt="raven">
+            <img class="ai-art__bg__img" src="/images/temple_ruins.webp" alt="temple_ruins">
+            <img class="ai-art__bg__img" src="/images/brunet_lady.webp" alt="brunet_lady">
+            <img class="ai-art__bg__img" src="/images/bluehairAnime.webp" alt="bluehairAnime">
+            <img class="ai-art__bg__img" src="/images/dracula.webp" alt="dracula">
+            <img class="ai-art__bg__img" src="/images/clouds_gathering.webp" alt="clouds_gathering"> 
+            <img class="ai-art__bg__img" src="/images/dark_queen.webp" alt="dark_queen">
+            <img class="ai-art__bg__img" src="/images/eastern_woman.webp" alt="eastern_woman">
+            <img class="ai-art__bg__img" src="/images/flower_lady.webp" alt="flower_lady">
+            <img class="ai-art__bg__img" src="/images/vietnamizeLake.webp" alt="vietnamizeLake">
+            <img class="ai-art__bg__img" src="/images/gothic_castle.webp" alt="gothic_castle">
+            <img class="ai-art__bg__img" src="/images/placue_doctor.webp" alt="placue_doctor">
+            <img class="ai-art__bg__img" src="/images/ink_lady.webp" alt="ink_lady">
+            <img class="ai-art__bg__img" src="/images/futuristic.webp" alt="futuristic">
+            <img class="ai-art__bg__img" src="/images/pixelLady2.webp" alt="pixelLady2">
+            <img class="ai-art__bg__img" src="/images/ink_lady2.webp" alt="ink_lady2">
+            <img class="ai-art__bg__img" src="/images/japanese_woman.webp" alt="japanese_woman">
+            <img class="ai-art__bg__img" src="/images/futuristic_car.webp" alt="futuristic_car">
+            <img class="ai-art__bg__img" src="/images/golden-woman.webp" alt="golden-woman">
+            <img class="ai-art__bg__img" src="/images/pirate_lady.webp" alt="pirate_lady">
+            <img class="ai-art__bg__img" src="/images/temple.webp" alt="temple.webp">
+            <img class="ai-art__bg__img" src="/images/vector_lady.webp" alt="vector_lady">
         </div>
     </section>
     <section class="questions inline-margin">
@@ -187,49 +189,37 @@
         </h3>
         <div class="questions-container">
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">What is Pixels AI Image Generator?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">What is Pixels AI Image Generator?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">AI generates images by using deep learning models, particularly generative adversarial networks (GANs) or variational autoencoders (VAEs). These models are trained on large datasets of images and learn the underlying patterns and features. When generating images, the AI model uses random input and transforms it into output that resembles the patterns it has learned, resulting in new, original images.</p>
                 </div>
             </div>
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">What is the role of blockchain?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">What is the role of blockchain?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">Blockchain plays a pivotal role in Pixels by verifying the authenticity of digital art, providing the framework for smart contracts to automate transactions, decentralizing control to eliminate intermediaries, and ensuring transparency through an immutable ledger.</p>
                 </div>
             </div>
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">How do I transfer image ownership?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">How do I transfer image ownership?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">To transfer ownership of a digital image on Pixels, you can employ blockchain's smart contract functionality, which involves specifying the recipient's wallet address and executing the transaction, effectively changing ownership.</p>
                 </div>
             </div>
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">Are there any fees for transactions?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">Are there any fees for transactions?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">Yes, there are transaction fees associated with blockchain transactions. These fees can vary depending on network usage and the complexity of the transaction, and there might be additional platform-specific fees for listing and selling digital art.</p>
                 </div>
             </div>
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">What happens if Pixels shuts down?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">What happens if Pixels shuts down?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">In the event of Pixels shutting down, the decentralized nature of the blockchain ensures that the ownership and transaction history of digital art remains intact, and users can continue to access their digital assets and provenance information.</p>
                 </div>
             </div>
             <div class="questions__item">
-                <!-- FAQ question -->
-                <h4 class="faq-page questions__item__question">What if I lose access to my tokens?</h4>
-                <!-- FAQ answer -->
+                <h4 class="faq-page questions__item__question" tabindex="0" role="button">What if I lose access to my tokens?</h4>
                 <div class="faq-body">
                     <p class="questions__item__answer">If you lose access to your tokens, it can be challenging to recover them. To mitigate this risk, it's crucial to secure your private keys, use robust storage methods, and, in the event of lost access, consider reaching out to the blockchain platform's support for guidance.</p>
                 </div>
@@ -242,7 +232,7 @@
             <h2>Finalize the vision with <i class="theme-color">Pixel's </i>photo editor</h2>
             <p>Take your image to the next level with a range of powerful editing options. Adjust brightness, contrast, and color saturation to create the perfect balance. Crop or resize to focus on the key elements that tell your story. Experiment with an array of artistic filters and effects to add your unique touch. From vintage vibes to modern aesthetics. Fine-tune your image with precision. Remove blemishes, smooth out imperfections, and highlight specific features to achieve the desired result.</p>
         </div>
-        <div class="editor__review inline-margin">
+        <div class="editor__review ">
             <img src="/images/InkLadyWithEdits.webp">
         </div> 
     </div>
@@ -255,42 +245,42 @@
             </div>
             <div class="col-items">
                 <div class="col-item">
-                    <img src="/icons/location.svg" alt="">
+                    <img src="/icons/location.svg" alt="Location icon">
                     <p>8819 Ohio St. South Gate, CA 90280</p>
                 </div>
                 <div class="col-item">
-                    <img src="/icons/mail.svg" alt="">
+                    <img src="/icons/mail.svg" alt="Mail icon">
                     <p>Ourstudio@hello.com</p>
                 </div>
                 <div class="col-item">
-                    <img src="/icons/phone.svg" alt="">
+                    <img src="/icons/phone.svg" alt="Phone icon">
                     <p>+1 234-333-6789</p>
                 </div>
             </div>
         </div>
         <div class="col">
-                <h5 class="theme-color">Service</h5>
+            <h5 class="theme-color">Service</h5>
             <div class="col-list">
                 <ul>
-                    <li><a>Illustration</a></li>
-                    <li><a>Mobile Design</a></li>
-                    <li><a>Motion Graphic</a></li>
-                    <li><a>Web Design</a></li>
-                    <li><a>Development</a></li>
-                    <li><a>SEO</a></li>
+                    <li><a href="#" tabindex="0">Illustration</a></li>
+                    <li><a href="#" tabindex="0">Mobile Design</a></li>
+                    <li><a href="#" tabindex="0">Motion Graphic</a></li>
+                    <li><a href="#" tabindex="0">Web Design</a></li>
+                    <li><a href="#" tabindex="0">Development</a></li>
+                    <li><a href="#" tabindex="0">SEO</a></li>
                 </ul>
             </div>
         </div>
         <div class="col">
-                <h5 class="theme-color">Company</h5>
+            <h5 class="theme-color">Company</h5>
             <div class="col-list">
                 <ul>
-                    <li><a>Service</a></li>
-                    <li><a>Features</a></li>
-                    <li><a>Our team</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><a href="#" tabindex="0">Service</a></li>
+                    <li><a href="#" tabindex="0">Features</a></li>
+                    <li><a href="#" tabindex="0">Our team</a></li>
+                    <li><a href="#" tabindex="0">Portfolio</a></li>
+                    <li><a href="#" tabindex="0">Blog</a></li>
+                    <li><a href="#" tabindex="0">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -298,21 +288,21 @@
             <h5 class="theme-color">Social</h5>
             <div class="col-list">
                 <ul>
-                    <li><a>X</a></li>
-                    <li><a>Dribble</a></li>
-                    <li><a>Behance</a></li>
-                    <li><a>Medium</a></li>
-                    <li><a>Instagram</a></li>
-                    <li><a>Facebook</a></li>
+                    <li><a href="#" tabindex="0">X</a></li>
+                    <li><a href="#" tabindex="0">Dribble</a></li>
+                    <li><a href="#" tabindex="0">Behance</a></li>
+                    <li><a href="#" tabindex="0">Medium</a></li>
+                    <li><a href="#" tabindex="0">Instagram</a></li>
+                    <li><a href="#" tabindex="0">Facebook</a></li>
                 </ul>
             </div>
         </div>
-        <div class="col">
+        <form class="col">
             <h5 class="theme-color">Join our Newsletter</h5>
             <input type="email" id="email" placeholder="enter your email" pattern=".+@globex\.com">
             <input type="submit"  value="Send" class="special"></input>
-        </div>
-        </div>
+        </form>
+      </div>
     </section>
 </body>
 </html>

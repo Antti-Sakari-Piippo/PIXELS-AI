@@ -187,10 +187,6 @@ image {
   height: 100%;
 }
 
-a:focus {
-  outline: 2px solid $bg-color1;
-}
-
 a {
   color: white;
   text-decoration: none;
@@ -207,12 +203,13 @@ a {
     background-color: $gradient-color-1;
     transition: width 0.3s ease;
   }
-
-  &:hover {
+  &:hover,
+  &:focus {
     color: $gradient-color-1;
+    outline: none;
   }
-
-  &:hover:before {
+  &:hover:before,
+  &:focus:before {
     width: 100%;
   }
 }
@@ -533,7 +530,7 @@ section.footer {
     max-width: $content-width-low;
     img {
       width: 16px;
-      margin-top: 0.3rem;
+      margin-top: 0.5rem;
       object-fit: contain;
     }
     h5 {
@@ -561,7 +558,12 @@ section.questions {
     width: 100%;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 1;
+    &:focus {
+      outline: none;
+      border: none;
+    }
   }
+
   .questions-container {
     display: flex;
     justify-content: center;
@@ -580,6 +582,10 @@ section.questions {
       border-radius: 10px;
       position: relative;
       padding: 1.4em;
+      &:focus-within {
+        outline: none;
+        box-shadow: 0 0 0 2px rgb(255, 0, 139);
+      }
       .questions__item__answer {
         margin-top: 1.7rem;
       }

@@ -46,7 +46,7 @@ script {
 }
 
 section:not(:first-child, .ai-art) {
-  padding-top: 6rem;
+  padding-top: 3rem;
   padding-bottom: 6rem;
 }
 
@@ -294,7 +294,7 @@ video {
   margin-top: 15rem;
 }
 .bg .bg-texts h2 {
-  max-width: 30ch;
+  max-width: 25ch;
 }
 .bg section.steps {
   display: flex;
@@ -368,11 +368,11 @@ video {
 section.user-stories {
   width: min(100% - 2rem, 1550px);
   margin-inline: auto;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
 }
 section.user-stories .user-stories__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1rem;
 }
 section.user-stories .user-stories__cards .user-stories__card {
@@ -466,20 +466,19 @@ section.editor {
 section.editor .editor-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  max-width: 100%;
   width: min(100% - 2rem, 80%);
   margin-inline: auto;
   justify-content: center;
   align-items: center;
   gap: 2.7rem;
+  margin-top: 4rem;
 }
 section.editor .editor-container .editor__texts p {
   font-size: clamp(0.9rem, 0.7891rem + 0.5068vw, 1.6rem);
 }
 section.editor .editor-container .editor__review {
   position: relative;
-}
-section.editor .editor-container .editor__review img {
-  aspect-ratio: 2/1.4;
 }
 
 section.footer {
@@ -622,15 +621,23 @@ h4.faq-page.rotate::after {
     padding-top: 14rem;
   }
 }
-@media only screen and (width <= 400px) {
+@media only screen and (width < 400px) {
   h4.faq-page::after {
-    display: none;
+    display: none !important;
   }
   .bg::before {
     height: 192%;
   }
   section.user-stories {
     padding-top: 0rem;
+  }
+}
+@media only screen and (width < 520px) {
+  .inline-margin,
+  .editor-container {
+    max-width: calc(100% - 2rem) !important;
+    width: calc(100% - 2rem) !important;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)) !important;
   }
 }
 @media only screen and (400px <= width <= 500px) {

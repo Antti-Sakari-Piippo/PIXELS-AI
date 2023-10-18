@@ -7,6 +7,7 @@ const questions = document.querySelectorAll('.faq-page')
 function toggleNavigation() {
   const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false
   navToggle.setAttribute('aria-expanded', !expanded)
+  // navMenu.style.display = expanded ? 'none' : 'flex'
 }
 
 // Toggle the navigation menu when the hamburger button is clicked
@@ -20,13 +21,12 @@ hamburger.addEventListener('keydown', (event) => {
     toggleNavigation()
   }
 })
-
-// Toggle the navigation menu when the Enter key is pressed on the hamburger button
-hamburger.addEventListener('keydown', (event) => {
+navToggle.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     toggleNavigation()
   }
 })
+
 // Click outside to close the navigation menu
 document.addEventListener('click', (event) => {
   if (
@@ -40,8 +40,6 @@ document.addEventListener('click', (event) => {
 // Update the navigation state when the window is resized
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1100) {
-    navToggle.setAttribute('aria-expanded', 'false')
-  } else {
     navToggle.setAttribute('aria-expanded', 'false')
   }
 })

@@ -257,7 +257,11 @@ h5 {
   font-size: 1.35rem;
 }
 
-h5.logo {
+h6 {
+  font-size: 1.35rem;
+}
+
+h6.logo {
   font-size: 1.5rem;
 }
 
@@ -521,34 +525,6 @@ section.editor {
   }
 }
 
-// FOOTER SECTION
-section.footer {
-  background-color: rgba($color: $footer-color, $alpha: 0.7);
-  .footer__content {
-    margin-inline: auto;
-    width: $content-width;
-    max-width: $content-width-low;
-    img {
-      width: 16px;
-      margin-top: 0.5rem;
-      object-fit: contain;
-    }
-    h5 {
-      margin-bottom: 0.9rem;
-    }
-    .col-items {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-    }
-    a,
-    p {
-      line-height: 1.6;
-      max-width: 18ch;
-    }
-  }
-}
-
 // QUESTION SECTION
 section.questions {
   width: $content-width;
@@ -621,6 +597,35 @@ h4.faq-page.rotate::after {
   max-height: 500px;
 }
 // END OF QUESTION SECTION
+
+// FOOTER SECTION
+section.footer {
+  background-color: rgba($color: $footer-color, $alpha: 0.7);
+  .footer__content {
+    margin-inline: auto;
+    width: $content-width;
+    max-width: $content-width-low;
+    img {
+      width: 16px;
+      margin-top: 0.5rem;
+      object-fit: contain;
+    }
+    h6 {
+      margin-bottom: 0.9rem;
+    }
+    .col-items {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    a,
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+      max-width: 18ch;
+    }
+  }
+}
 
 // MEDIA QUERIES
 @media screen and (max-width: 1100px) {
@@ -700,4 +705,22 @@ h4.faq-page.rotate::after {
   section.user-stories {
     padding-top: 10rem;
   }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color: $gradient-color-1, $alpha: 0.35);
+  background: $bg-clr;
+  // background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gradient-color-1;
 }

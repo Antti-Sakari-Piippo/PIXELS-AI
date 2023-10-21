@@ -46,7 +46,7 @@ script {
 }
 
 section:not(:first-child, .ai-art) {
-  padding-top: 3rem;
+  padding-top: 5rem;
   padding-bottom: 6rem;
 }
 

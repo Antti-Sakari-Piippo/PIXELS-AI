@@ -156,6 +156,15 @@ input {
   border: none;
 }
 
+i,
+p,
+h1,
+h2,
+h3,
+h4 {
+  z-index: 9999;
+}
+
 i {
   font-style: italic;
 }
@@ -287,6 +296,7 @@ video {
     object-fit: cover;
     opacity: 0.08;
     background-position: top;
+    pointer-events: none;
     background-size: cover;
     border-radius: 0 0 100% 100% / 0 0 100px 100px;
   }
@@ -345,7 +355,7 @@ video {
           }
           .steps__points__step {
             .steps__points__step__line {
-              .ball {
+              .steps__points__ball {
                 position: relative;
                 height: 9px;
                 width: 9px;
@@ -365,6 +375,7 @@ video {
                 left: -43px;
                 position: relative;
                 top: 87px;
+                height: 100%;
               }
             }
             .steps__points__step__content {

@@ -406,6 +406,8 @@ section.user-stories .user-stories__cards .user-stories__card p {
 section.user-stories .user-stories__cards .user-stories__card p img.quotation-img {
   width: 1rem;
   height: 1rem;
+  display: inline-block;
+  margin-inline: 2px;
 }
 section.user-stories .user-stories__cards .user-stories__card span {
   color: rgb(255, 0, 139);
@@ -488,6 +490,7 @@ section.editor .editor-container {
 }
 section.editor .editor-container .editor__texts p {
   font-size: clamp(0.9rem, 0.7891rem + 0.5068vw, 1.6rem);
+  max-width: 43ch;
 }
 section.editor .editor-container .editor__review {
   position: relative;
@@ -593,6 +596,7 @@ section.footer .footer__content p {
   line-height: 1.6;
   font-size: 1rem;
   max-width: 18ch;
+  text-wrap: pretty;
 }
 
 @media screen and (max-width: 1100px) {

@@ -441,8 +441,11 @@ section.user-stories {
         color: white;
         padding: $--__padding;
         img.quotation-img {
-          width: 1rem;
-          height: 1rem;
+          $size: 1rem;
+          width: $size;
+          height: $size;
+          display: inline-block;
+          margin-inline: 2px;
         }
       }
       span {
@@ -528,6 +531,7 @@ section.editor {
     .editor__texts {
       p {
         font-size: clamp(0.9rem, 0.7891rem + 0.5068vw, 1.6rem);
+        max-width: 43ch;
       }
     }
     .editor__review {
@@ -634,6 +638,7 @@ section.footer {
       line-height: 1.6;
       font-size: 1rem;
       max-width: 18ch;
+      text-wrap: pretty;
     }
   }
 }

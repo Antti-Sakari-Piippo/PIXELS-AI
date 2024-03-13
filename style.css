@@ -205,7 +205,7 @@ a:hover:before, a:focus:before {
 h1 {
   font-size: 9rem;
   font-size: clamp(3.7rem, 4.7rem + 4vw, 12rem);
-  letter-spacing: -7px;
+  letter-spacing: -0.06em;
   line-height: 1.2;
 }
 
@@ -219,7 +219,7 @@ h2 {
   font-size: clamp(2.2rem, 2.2891rem + 0.5068vw, 3.2rem);
   line-height: 1.2;
   margin-bottom: 1.9rem;
-  letter-spacing: -1px;
+  letter-spacing: -0.04em;
 }
 
 h3 {
@@ -227,7 +227,7 @@ h3 {
   font-size: clamp(2.2rem, 1.9rem + 0.7vw, 3rem);
   line-height: 1.2;
   margin-bottom: 1.1rem;
-  letter-spacing: -2px;
+  letter-spacing: -0.04em;
 }
 
 h3:not(.steps__header) {
@@ -461,6 +461,7 @@ section.ai-art .ai-art__community-text {
 section.ai-art .ai-art__community-text h2 {
   max-width: 19ch;
   font-size: clamp(2.3rem, 4.1vw, 4.1rem);
+  letter-spacing: -0.05em;
 }
 section.ai-art .ai-art__bg {
   display: grid;

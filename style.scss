@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  color: white;
 }
 
 // Widths
@@ -14,6 +15,10 @@ $content-width: min(100% - 2rem, 1550px);
 $content-width-low: min(100% - 2rem, 80%);
 
 // Colors
+$bg-dark-transparent: rgba(
+  $color: rgb(0, 0, 0),
+  $alpha: 0.9
+);
 $bg-clr: #331e41;
 $footer-color: #181531;
 $menu-color: #302640;
@@ -23,6 +28,7 @@ $bg-color1: rgb(255, 0, 139);
 $bg-color2: rgb(151, 71, 255);
 $dark-color1: rgba(255, 0, 139, 0.3);
 $dark-color2: rgba(151, 71, 255, 0.3);
+$editor-color: rgb(28, 27, 52);
 
 // Gradients
 $bg-gradient: linear-gradient(0deg, rgba(54, 30, 69, 1) 0%, rgba(43, 29, 52, 1) 100%);
@@ -78,7 +84,7 @@ section:not(:first-child, .ai-art) {
   -webkit-text-fill-color: transparent;
 }
 
-.special {
+.special-btn {
   padding: 0.5em 2em;
   background: $theme-gradient-vibrant;
   border-radius: 3em;
@@ -96,15 +102,16 @@ section:not(:first-child, .ai-art) {
     align-items: center;
     justify-content: center;
   }
-  &.large {
-    font-size: clamp(1.1rem, 1.2rem + 0.362vw, 1.6rem);
-    span {
-      margin-bottom: 0.25rem;
-    }
-    img {
-      height: 1.1rem;
-      margin-left: 0.7rem;
-    }
+}
+
+.large-btn {
+  font-size: clamp(1.1rem, 1.2rem + 0.362vw, 1.6rem);
+  span {
+    margin-bottom: 0.25rem;
+  }
+  img {
+    height: 1.1rem;
+    margin-left: 0.7rem;
   }
 }
 
@@ -419,7 +426,8 @@ video {
 
 // USER STORIES SECTION
 section.user-stories {
-  width: min(100% - 2rem, 1550px);
+  width: $content-width;
+  $__border-rad: 4px;
   margin-inline: auto;
   margin-top: 2.5rem;
   .user-stories__cards {
@@ -432,17 +440,16 @@ section.user-stories {
       flex-direction: column;
       justify-content: space-between;
       border-radius: 5px;
-      padding: 1rem;
       position: relative;
       padding: 4px;
       background: linear-gradient(to right, $bg-color1, $bg-color2);
       overflow: hidden;
 
       p {
-        background: rgba($color: #000000, $alpha: 0.9);
+        background: $bg-dark-transparent;
         color: white;
         padding: $--__padding;
-        border-radius: 4px 4px 0 0;
+        border-radius: $__border-rad $__border-rad 0 0;
         img.quotation-img {
           $size: 1rem;
           width: $size;
@@ -456,7 +463,7 @@ section.user-stories {
         font-size: 1.3rem;
       }
       .user-stories__card__profile {
-        background: rgba($color: #000000, $alpha: 0.9);
+        background: $bg-dark-transparent;
         color: white;
         padding-inline: $--__padding;
         padding-bottom: 1.5rem;
@@ -465,6 +472,7 @@ section.user-stories {
         height: 100%;
         justify-content: left;
         gap: 0.7rem;
+        border-radius: 0 0 $__border-rad $__border-rad;
         img {
           width: 20%;
           aspect-ratio: 1;
@@ -519,8 +527,8 @@ section.ai-art {
 // EDITOR SECTION
 section.editor {
   width: 100%;
-  background-color: #1c1b34;
-  background-color: rgba($color: #1c1b34, $alpha: 0.6);
+  background-color: $editor-color;
+  background-color: rgba($color: $editor-color, $alpha: 0.6);
   border-radius: 90% 90% 0 0 / 80px 80px 0 0;
   .editor-container {
     display: grid;

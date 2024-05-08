@@ -185,8 +185,8 @@ li {
   list-style-type: none;
 }
 
-button:focus,
-input[type='submit']:focus {
+button:focus-within,
+input[type='submit']:focus-within {
   outline: 2px solid $bg-color1;
 }
 
@@ -220,12 +220,12 @@ a {
     transition: width 0.3s ease;
   }
   &:hover,
-  &:focus {
+  &:focus-within {
     color: $gradient-color-1;
     outline: none;
   }
   &:hover:before,
-  &:focus:before {
+  &:focus-within:before {
     width: 100%;
   }
 }
@@ -559,7 +559,7 @@ section.questions {
     width: 100%;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 1;
-    &:focus {
+    &:focus-within {
       outline: none;
       border: none;
     }
@@ -583,7 +583,7 @@ section.questions {
       border-radius: 10px;
       position: relative;
       padding: 1.4em;
-      &:focus-within {
+      &:has(:focus-visible) {
         outline: none;
         box-shadow: 0 0 0 2px rgb(255, 0, 139);
       }
@@ -591,9 +591,9 @@ section.questions {
         margin-top: 1.7rem;
       }
       h4.faq-page::after {
+        content: '';
         transition: ease-in-out 0.2s;
         position: absolute;
-        content: '';
         background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
         background-position: center, right, bottom;
         background-repeat: no-repeat;
@@ -606,6 +606,9 @@ section.questions {
         scale: 0.6;
         height: 2.2rem;
         aspect-ratio: 1;
+      }
+      h4.faq-page:hover::after {
+        scale: 0.7;
       }
     }
   }

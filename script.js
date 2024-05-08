@@ -1,13 +1,13 @@
 const hamburger = document.querySelector('.hamburger')
 const navToggle = document.getElementById('navToggle')
 const navMenu = document.getElementById('navMenu')
-const questions = document.querySelectorAll('.faq-page')
+const questionsItem = document.querySelectorAll('.questions__item')
 
 // Navbar
 function toggleNavigation() {
   const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false
   navToggle.setAttribute('aria-expanded', !expanded)
-  // navMenu.style.display = expanded ? 'none' : 'flex'
+  // navMenu.style.display = expanded ? 'none' : 'flex';
 }
 
 // Toggle the navigation menu when the hamburger button is clicked
@@ -44,28 +44,21 @@ window.addEventListener('resize', () => {
   }
 })
 
-// Accordion
-questions.forEach((item) => {
+// Accordion functionality
+questionsItem.forEach((item) => {
   item.addEventListener('click', () => {
-    const faqBody = item.parentElement.querySelector('.faq-body')
+    const faqBody = item.querySelector('.faq-body')
     faqBody.classList.toggle('active')
-    item.classList.toggle('rotate')
-  })
-})
-
-// Aria for Accordion
-questions.forEach((button) => {
-  button.addEventListener('click', () => {
-    const faqBody = button.parentElement.querySelector('.faq-body')
-    const expanded = button.getAttribute('aria-expanded') === 'true'
-    button.setAttribute('aria-expanded', !expanded)
+    item.querySelector('h4').classList.toggle('rotate')
+    const expanded = item.getAttribute('aria-expanded') === 'true'
+    item.setAttribute('aria-expanded', !expanded)
     faqBody.setAttribute('aria-hidden', expanded)
   })
 
-  button.addEventListener('keydown', (e) => {
+  item.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
       // Enter key
-      button.click()
+      item.click()
     }
   })
 })

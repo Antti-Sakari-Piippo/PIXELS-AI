@@ -160,8 +160,8 @@ li {
   list-style-type: none;
 }
 
-button:focus,
-input[type=submit]:focus {
+button:focus-within,
+input[type=submit]:focus-within {
   outline: 2px solid rgb(255, 0, 139);
 }
 
@@ -196,11 +196,11 @@ a:before {
   background-color: rgb(255, 0, 139);
   transition: width 0.3s ease;
 }
-a:hover, a:focus {
+a:hover, a:focus-within {
   color: rgb(255, 0, 139);
   outline: none;
 }
-a:hover:before, a:focus:before {
+a:hover:before, a:focus-within:before {
   width: 100%;
 }
 
@@ -511,7 +511,7 @@ section.questions h4 {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 1;
 }
-section.questions h4:focus {
+section.questions h4:focus-within {
   outline: none;
   border: none;
 }
@@ -535,7 +535,7 @@ section.questions .questions-container .questions__item {
   position: relative;
   padding: 1.4em;
 }
-section.questions .questions-container .questions__item:focus-within {
+section.questions .questions-container .questions__item:has(:focus-visible) {
   outline: none;
   box-shadow: 0 0 0 2px rgb(255, 0, 139);
 }
@@ -543,9 +543,9 @@ section.questions .questions-container .questions__item .questions__item__answer
   margin-top: 1.7rem;
 }
 section.questions .questions-container .questions__item h4.faq-page::after {
+  content: "";
   transition: ease-in-out 0.2s;
   position: absolute;
-  content: "";
   background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
   background-position: center, right, bottom;
   background-repeat: no-repeat;
@@ -558,6 +558,9 @@ section.questions .questions-container .questions__item h4.faq-page::after {
   scale: 0.6;
   height: 2.2rem;
   aspect-ratio: 1;
+}
+section.questions .questions-container .questions__item h4.faq-page:hover::after {
+  scale: 0.7;
 }
 
 h4.faq-page.rotate::after {

@@ -515,11 +515,9 @@ section.ai-art {
   }
   .ai-art__bg {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    min-height: 300px;
     img.ai-art__bg__img {
-      aspect-ratio: 1;
       user-select: none;
+      min-height: 500px;
     }
   }
 }
@@ -576,9 +574,9 @@ section.questions {
     width: 100%;
     margin-inline: auto;
     .questions__item {
+      display: flex;
       justify-content: space-between;
       cursor: pointer;
-      display: flex;
       flex-direction: column;
       max-width: 495px;
       background: $theme-gradient-dark;

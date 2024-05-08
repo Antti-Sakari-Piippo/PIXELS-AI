@@ -38,7 +38,7 @@ script {
   cursor: pointer;
   display: none;
 }
-#navToggle[aria-expanded='true'] + #navMenu {
+#navToggle[aria-expanded=true] + #navMenu {
   display: flex;
   top: 0;
   right: 0;
@@ -89,28 +89,25 @@ section:not(:first-child, .ai-art) {
 }
 
 button,
-input[type='submit'] {
+input[type=submit] {
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-button:hover,
-button:focus,
-input[type='submit']:hover,
-input[type='submit']:focus {
+button:hover, button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
   transform: scale(1.05);
 }
 button span,
-input[type='submit'] span {
+input[type=submit] span {
   color: white;
 }
 
 button,
-input[type='reset'] {
+input[type=reset] {
   background: none;
   color: inherit;
   border: none;
@@ -121,7 +118,7 @@ input[type='reset'] {
   border: transparent;
 }
 
-input[type='email'] {
+input[type=email] {
   margin-bottom: 1rem;
   padding: 0.5rem;
   padding-bottom: 0.55rem;
@@ -132,7 +129,7 @@ input[type='email'] {
 body {
   background: linear-gradient(0deg, rgb(54, 30, 69) 0%, rgb(43, 29, 52) 100%);
   margin-inline: auto;
-  font-family: 'K2D', sans-serif;
+  font-family: "K2D", sans-serif;
   overflow-x: hidden;
 }
 
@@ -164,7 +161,7 @@ li {
 }
 
 button:focus,
-input[type='submit']:focus {
+input[type=submit]:focus {
   outline: 2px solid rgb(255, 0, 139);
 }
 
@@ -177,7 +174,7 @@ svg,
 image {
   display: block;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   max-width: 100%;
   height: 100%;
 }
@@ -190,7 +187,7 @@ a {
   cursor: pointer;
 }
 a:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -199,13 +196,11 @@ a:before {
   background-color: rgb(255, 0, 139);
   transition: width 0.3s ease;
 }
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: rgb(255, 0, 139);
   outline: none;
 }
-a:hover:before,
-a:focus:before {
+a:hover:before, a:focus:before {
   width: 100%;
 }
 
@@ -268,11 +263,11 @@ video {
   display: block;
   max-width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .bg::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 197%;
   position: absolute;
@@ -280,7 +275,7 @@ video {
   background: url(images/ladyOfTheLake.webp);
   background-repeat: no-repeat;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   opacity: 0.08;
   background-position: top;
   pointer-events: none;
@@ -333,14 +328,7 @@ video {
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points a {
   text-decoration: underline;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__line
-  .steps__points__ball {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__line .steps__points__ball {
   position: relative;
   height: 9px;
   width: 9px;
@@ -350,14 +338,7 @@ video {
   left: 4px;
   border-radius: 50%;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__line
-  hr {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__line hr {
   position: relative;
   border: none;
   border-top: 5px dotted white;
@@ -369,46 +350,19 @@ video {
   top: 87px;
   height: 100%;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__content {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content {
   margin-bottom: 2.25rem;
   position: relative;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__content
-  h4 {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content h4 {
   padding-inline-start: 2rem;
   line-height: 1.07;
   margin-bottom: 0.6rem;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__content
-  h4.theme-color {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content h4.theme-color {
   margin-bottom: 0.3rem;
 }
-.bg
-  section.steps
-  .steps__how-does-it-work
-  .steps-container
-  .steps__points
-  .steps__points__step
-  .steps__points__step__content
-  p {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content p {
   padding-inline-start: 2rem;
   max-height: 1.5rem;
 }
@@ -425,7 +379,7 @@ video {
   border-radius: 0.5em;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 section.user-stories {
@@ -480,7 +434,7 @@ section.user-stories .user-stories__cards .user-stories__card .user-stories__car
   width: 20%;
   aspect-ratio: 1;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 section.ai-art {
@@ -491,7 +445,7 @@ section.ai-art {
   margin: 2rem 0;
 }
 section.ai-art::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(51, 30, 65, 0.5);
@@ -514,18 +468,17 @@ section.ai-art .ai-art__community-text h2 {
 }
 section.ai-art .ai-art__bg {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  min-height: 300px;
 }
 section.ai-art .ai-art__bg img.ai-art__bg__img {
-  aspect-ratio: 1;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  min-height: 500px;
 }
 
 section.editor {
   width: 100%;
+  background-color: rgb(28, 27, 52);
   background-color: rgba(28, 27, 52, 0.6);
   border-radius: 90% 90% 0 0/80px 80px 0 0;
 }
@@ -572,9 +525,9 @@ section.questions .questions-container {
   margin-inline: auto;
 }
 section.questions .questions-container .questions__item {
+  display: flex;
   justify-content: space-between;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   max-width: 495px;
   background: linear-gradient(rgba(255, 0, 139, 0.3) 0%, rgba(151, 71, 255, 0.3) 100%);
@@ -592,7 +545,7 @@ section.questions .questions-container .questions__item .questions__item__answer
 section.questions .questions-container .questions__item h4.faq-page::after {
   transition: ease-in-out 0.2s;
   position: absolute;
-  content: '';
+  content: "";
   background-image: url(/icons/dropdown.svg), linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
   background-position: center, right, bottom;
   background-repeat: no-repeat;
@@ -633,7 +586,7 @@ section.footer .footer__content img {
   width: 16px;
   margin-top: 0.5rem;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 section.footer .footer__content h6 {
   margin-bottom: 0.9rem;
@@ -664,7 +617,7 @@ section.footer .footer__content p {
     transition: right 0.3s;
     border-radius: 2rem 0rem 2rem 2rem;
   }
-  #navMenu[aria-expanded='true'] {
+  #navMenu[aria-expanded=true] {
     right: 0;
   }
   .bg nav {
@@ -741,4 +694,4 @@ section.footer .footer__content p {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(255, 0, 139);
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

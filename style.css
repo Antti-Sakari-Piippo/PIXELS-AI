@@ -634,7 +634,7 @@ section.footer .footer__content p {
     right: 2rem;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (width < 1200px) {
   .editor__texts p {
     max-width: unset !important;
   }

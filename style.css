@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   font: inherit;
-  color: white;
 }
 
 script {
@@ -16,7 +15,7 @@ script {
 .col-container {
   display: grid;
   gap: 1.8rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 }
 
 .col {
@@ -26,7 +25,7 @@ script {
 .col-item {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 0.4rem;
+  margin-block-end: 0.4rem;
 }
 
 .hamburger {
@@ -42,13 +41,13 @@ script {
   display: flex;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 18.75rem;
   flex-direction: column;
 }
 
 section:not(:first-child, .ai-art) {
-  padding-top: 5rem;
-  padding-bottom: 6rem;
+  padding-block-start: 5rem;
+  padding-block-end: 6rem;
 }
 
 .theme-color {
@@ -66,10 +65,10 @@ section:not(:first-child, .ai-art) {
   justify-content: center;
 }
 .special-btn span {
-  margin-bottom: 0.1rem;
+  margin-block-end: 0.1rem;
 }
 .special-btn img {
-  margin-left: 0.5rem;
+  margin-inline-start: 0.5rem;
   height: 0.7rem;
   aspect-ratio: 1;
   display: flex;
@@ -81,11 +80,11 @@ section:not(:first-child, .ai-art) {
   font-size: clamp(1.1rem, 1.2rem + 0.362vw, 1.6rem);
 }
 .large-btn span {
-  margin-bottom: 0.25rem;
+  margin-block-end: 0.25rem;
 }
 .large-btn img {
   height: 1.1rem;
-  margin-left: 0.7rem;
+  margin-inline-start: 0.7rem;
 }
 
 button,
@@ -101,10 +100,6 @@ input[type=submit]:hover,
 input[type=submit]:focus {
   transform: scale(1.05);
 }
-button span,
-input[type=submit] span {
-  color: white;
-}
 
 button,
 input[type=reset] {
@@ -119,9 +114,9 @@ input[type=reset] {
 }
 
 input[type=email] {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   padding: 0.5rem;
-  padding-bottom: 0.55rem;
+  padding-block-end: 0.55rem;
   color: black;
   border-radius: 0.5rem;
 }
@@ -152,7 +147,7 @@ i {
 }
 
 p {
-  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.3rem);
+  font-size: clamp(0.8rem, 0.7rem + 0.3vw, 1.3rem);
   line-height: 1.4;
 }
 
@@ -220,20 +215,21 @@ h2 {
   font-size: 2.9rem;
   font-size: clamp(2.2rem, 2.2891rem + 0.5068vw, 3.2rem);
   line-height: 1.2;
-  margin-bottom: 1.9rem;
+  margin-block-end: 1.9rem;
   letter-spacing: -0.04em;
+  text-wrap: pretty;
 }
 
 h3 {
   font-size: 2.6rem;
   font-size: clamp(2.2rem, 1.9rem + 0.7vw, 3rem);
   line-height: 1.2;
-  margin-bottom: 1.1rem;
+  margin-block-end: 1.1rem;
   letter-spacing: -0.04em;
 }
 
 h3:not(.steps__header) {
-  margin-bottom: 2.8rem;
+  margin-block-end: 2.8rem;
   font-size: clamp(2.2rem, 2.5rem + 0.7vw, 3rem);
   text-align: center;
 }
@@ -280,7 +276,7 @@ video {
   background-position: top;
   pointer-events: none;
   background-size: cover;
-  border-radius: 0 0 100% 100%/0 0 100px 100px;
+  border-radius: 0 0 100% 100%/0 0 6.25rem 6.25rem;
 }
 .bg nav {
   display: flex;
@@ -294,7 +290,7 @@ video {
   gap: 3rem;
   align-items: center;
   text-align: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
 }
 .bg nav ul li a {
   font-size: 1.4rem;
@@ -305,7 +301,7 @@ video {
 .bg .bg-texts {
   max-width: min(100% - 2rem, 80%);
   margin-inline: auto;
-  padding-bottom: 7rem;
+  padding-block-end: 7rem;
   margin-top: 15rem;
 }
 .bg .bg-texts h2 {
@@ -328,7 +324,7 @@ video {
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points a {
   text-decoration: underline;
 }
-.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__line .steps__points__ball {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__ball {
   position: relative;
   height: 9px;
   width: 9px;
@@ -338,10 +334,10 @@ video {
   left: 4px;
   border-radius: 50%;
 }
-.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__line hr {
+.bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step hr {
   position: relative;
   border: none;
-  border-top: 5px dotted white;
+  border-block-start: 5px dotted white;
   color: #fff;
   width: 103px;
   transform: rotate(90deg);
@@ -351,16 +347,16 @@ video {
   height: 100%;
 }
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content {
-  margin-bottom: 2.25rem;
+  margin-block-end: 2.25rem;
   position: relative;
 }
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content h4 {
   padding-inline-start: 2rem;
   line-height: 1.07;
-  margin-bottom: 0.6rem;
+  margin-block-end: 0.6rem;
 }
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content h4.theme-color {
-  margin-bottom: 0.3rem;
+  margin-block-end: 0.3rem;
 }
 .bg section.steps .steps__how-does-it-work .steps-container .steps__points .steps__points__step .steps__points__step__content p {
   padding-inline-start: 2rem;
@@ -373,7 +369,7 @@ video {
   display: grid;
   gap: 0.3rem;
   scale: 0.9;
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 .bg section.steps .steps__showcase img {
   border-radius: 0.5em;
@@ -389,7 +385,7 @@ section.user-stories {
 }
 section.user-stories .user-stories__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
   gap: 1rem;
 }
 section.user-stories .user-stories__cards .user-stories__card {
@@ -422,11 +418,11 @@ section.user-stories .user-stories__cards .user-stories__card .user-stories__car
   background: rgba(0, 0, 0, 0.9);
   color: white;
   padding-inline: 1.9em;
-  padding-bottom: 1.5rem;
+  padding-block-end: 1.5rem;
   display: flex;
   align-items: center;
   height: 100%;
-  justify-content: left;
+  justify-content: flex-start;
   gap: 0.7rem;
   border-radius: 0 0 4px 4px;
 }
@@ -473,14 +469,14 @@ section.ai-art .ai-art__bg img.ai-art__bg__img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  min-height: 500px;
+  min-height: 31.25rem;
 }
 
 section.editor {
   width: 100%;
   background-color: rgb(28, 27, 52);
   background-color: rgba(28, 27, 52, 0.6);
-  border-radius: 90% 90% 0 0/80px 80px 0 0;
+  border-radius: 90% 90% 0 0/5rem 5rem 0 0;
 }
 section.editor .editor-container {
   display: grid;
@@ -494,7 +490,7 @@ section.editor .editor-container {
   margin-top: 4rem;
 }
 section.editor .editor-container .editor__texts p {
-  font-size: clamp(0.9rem, 0.7891rem + 0.5068vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.7rem + 0.5068vw, 1.55rem);
   max-width: 43ch;
 }
 section.editor .editor-container .editor__review {
@@ -592,7 +588,7 @@ section.footer .footer__content img {
      object-fit: contain;
 }
 section.footer .footer__content h6 {
-  margin-bottom: 0.9rem;
+  margin-block-end: 0.9rem;
 }
 section.footer .footer__content .col-items {
   display: flex;
@@ -607,7 +603,7 @@ section.footer .footer__content p {
   text-wrap: pretty;
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
   #navMenu {
     list-style: none;
     text-align: center;
@@ -634,21 +630,21 @@ section.footer .footer__content p {
     right: 2rem;
   }
 }
-@media only screen and (width < 1200px) {
+@media (width < 1200px) {
   .editor__texts p {
     max-width: unset !important;
   }
 }
-@media only screen and (width < 1100px) {
+@media (width < 1100px) {
   .steps__showcase {
     display: none !important;
   }
   section.user-stories {
-    padding-top: 16rem;
+    padding-block-start: 16rem;
     margin-top: 0;
   }
 }
-@media only screen and (width <= 700px) {
+@media (width <= 700px) {
   h4.faq-page::after {
     top: -0.2rem;
   }
@@ -656,10 +652,10 @@ section.footer .footer__content p {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   section.user-stories {
-    padding-top: 14rem;
+    padding-block-start: 14rem;
   }
 }
-@media only screen and (width < 400px) {
+@media (width < 400px) {
   h4.faq-page::after {
     display: none !important;
   }
@@ -667,10 +663,10 @@ section.footer .footer__content p {
     height: 192%;
   }
   section.user-stories {
-    padding-top: 0rem;
+    padding-block-start: 0rem;
   }
 }
-@media only screen and (width < 520px) {
+@media (width < 520px) {
   .inline-margin,
   .editor-container {
     max-width: calc(100% - 2rem) !important;
@@ -678,9 +674,9 @@ section.footer .footer__content p {
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)) !important;
   }
 }
-@media only screen and (400px <= width <= 500px) {
+@media (400px <= width <= 500px) {
   section.user-stories {
-    padding-top: 10rem;
+    padding-block-start: 10rem;
   }
 }
 /* width */

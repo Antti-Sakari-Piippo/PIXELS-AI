@@ -57,9 +57,9 @@ section:not(:first-child, .ai-art) {
 }
 
 .special-btn {
-  padding: 0.5em 2em;
+  padding: 0.5em 1.3em;
   background: linear-gradient(rgb(255, 0, 139) 0%, rgb(151, 71, 255) 100%);
-  border-radius: 3em;
+  border-radius: 0.7em;
   display: flex;
   align-items: center;
   justify-content: center;

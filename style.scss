@@ -73,7 +73,7 @@ script {
   }
 }
 
-section:not(:first-child, .ai-art) {
+section:not(:first-child, .hero) {
   padding-block-start: 5rem;
   padding-block-end: $section-margin;
 }
@@ -425,6 +425,7 @@ section.user-stories {
   $__border-rad: 4px;
   margin-inline: auto;
   margin-top: 2.5rem;
+  margin-block-end: 6rem;
   .user-stories__cards {
     $--__padding: 1.9em;
     display: grid;
@@ -479,7 +480,7 @@ section.user-stories {
 }
 
 // AI ART SECTION
-section.ai-art {
+section.hero {
   position: relative;
   display: flex;
   justify-content: center;
@@ -493,7 +494,7 @@ section.ai-art {
     position: absolute;
   }
 
-  .ai-art__community-text {
+  .hero__community-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -502,28 +503,30 @@ section.ai-art {
     position: absolute;
     width: $content-width;
     flex-wrap: wrap;
-    h2 {
+    h3 {
       max-width: 19ch;
       font-size: clamp(2.3rem, 4.1vw, 4.1rem);
       letter-spacing: -0.05em;
+      text-align: left;
     }
   }
-  .ai-art__bg {
+  .hero__bg {
     display: grid;
-    img.ai-art__bg__img {
+    img.hero__bg__img {
       user-select: none;
-      min-height: 31.25rem;
+      min-height: 25rem;
+      width: 100vw;
     }
   }
 }
 
 // EDITOR SECTION
-section.editor {
+section.text-image {
   width: 100%;
   background-color: $editor-color;
   background-color: rgba($color: $editor-color, $alpha: 0.6);
   border-radius: 90% 90% 0 0 / 5rem 5rem 0 0;
-  .editor-container {
+  .text-image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     max-width: 100%;
@@ -533,13 +536,16 @@ section.editor {
     align-items: center;
     gap: 2.7rem;
     margin-top: 4rem;
-    .editor__texts {
+    .text-image__texts {
+      h2 {
+        max-width: 17ch;
+      }
       p {
         font-size: clamp(0.9rem, 0.7rem + 0.5068vw, 1.55rem);
         max-width: 43ch;
       }
     }
-    .editor__review {
+    .text-image__review {
       position: relative;
     }
   }
@@ -550,10 +556,12 @@ section.questions {
   width: $content-width;
   margin-inline: auto;
   h4 {
-    text-wrap: nowrap;
-    width: 100%;
+    display: flex;
+    align-items: center;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 1;
+    width: 100%;
+    text-wrap: nowrap;
     &:focus-within {
       outline: none;
       border: none;
@@ -594,7 +602,6 @@ section.questions {
         background-repeat: no-repeat;
         display: inline-block;
         right: 0.5rem;
-        top: 0.19rem;
         border-radius: 50%;
         width: 2.2rem;
         padding: 2.2rem;
@@ -683,12 +690,6 @@ section.footer {
   }
 }
 
-@media (width < 1200px) {
-  .editor__texts p {
-    max-width: unset !important;
-  }
-}
-
 @media (width < 1100px) {
   .steps__showcase {
     display: none !important;
@@ -703,7 +704,7 @@ section.footer {
   h4.faq-page::after {
     top: -0.2rem;
   }
-  section.editor {
+  section.text-image {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   section.user-stories {
@@ -724,7 +725,7 @@ section.footer {
 
 @media (width < 520px) {
   .inline-margin,
-  .editor-container {
+  .text-image-container {
     max-width: calc(100% - 2rem) !important;
     width: calc(100% - 2rem) !important;
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)) !important;

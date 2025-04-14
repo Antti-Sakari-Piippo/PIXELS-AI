@@ -45,7 +45,7 @@ script {
   flex-direction: column;
 }
 
-section:not(:first-child, .ai-art) {
+section:not(:first-child, .hero) {
   padding-block-start: 5rem;
   padding-block-end: 6rem;
 }
@@ -382,6 +382,7 @@ section.user-stories {
   width: min(100% - 2rem, 1550px);
   margin-inline: auto;
   margin-top: 2.5rem;
+  margin-block-end: 6rem;
 }
 section.user-stories .user-stories__cards {
   display: grid;
@@ -433,21 +434,21 @@ section.user-stories .user-stories__cards .user-stories__card .user-stories__car
      object-fit: contain;
 }
 
-section.ai-art {
+section.hero {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
 }
-section.ai-art::after {
+section.hero::after {
   content: "";
   width: 100%;
   height: 100%;
   background-color: rgba(51, 30, 65, 0.5);
   position: absolute;
 }
-section.ai-art .ai-art__community-text {
+section.hero .hero__community-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,28 +458,30 @@ section.ai-art .ai-art__community-text {
   width: min(100% - 2rem, 1550px);
   flex-wrap: wrap;
 }
-section.ai-art .ai-art__community-text h2 {
+section.hero .hero__community-text h3 {
   max-width: 19ch;
   font-size: clamp(2.3rem, 4.1vw, 4.1rem);
   letter-spacing: -0.05em;
+  text-align: left;
 }
-section.ai-art .ai-art__bg {
+section.hero .hero__bg {
   display: grid;
 }
-section.ai-art .ai-art__bg img.ai-art__bg__img {
+section.hero .hero__bg img.hero__bg__img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  min-height: 31.25rem;
+  min-height: 25rem;
+  width: 100vw;
 }
 
-section.editor {
+section.text-image {
   width: 100%;
   background-color: rgb(28, 27, 52);
   background-color: rgba(28, 27, 52, 0.6);
   border-radius: 90% 90% 0 0/5rem 5rem 0 0;
 }
-section.editor .editor-container {
+section.text-image .text-image-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   max-width: 100%;
@@ -489,11 +492,14 @@ section.editor .editor-container {
   gap: 2.7rem;
   margin-top: 4rem;
 }
-section.editor .editor-container .editor__texts p {
+section.text-image .text-image-container .text-image__texts h2 {
+  max-width: 17ch;
+}
+section.text-image .text-image-container .text-image__texts p {
   font-size: clamp(0.9rem, 0.7rem + 0.5068vw, 1.55rem);
   max-width: 43ch;
 }
-section.editor .editor-container .editor__review {
+section.text-image .text-image-container .text-image__review {
   position: relative;
 }
 
@@ -502,10 +508,12 @@ section.questions {
   margin-inline: auto;
 }
 section.questions h4 {
-  text-wrap: nowrap;
-  width: 100%;
+  display: flex;
+  align-items: center;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 1;
+  width: 100%;
+  text-wrap: nowrap;
 }
 section.questions h4:focus-within {
   outline: none;
@@ -547,7 +555,6 @@ section.questions .questions-container .questions__item h4.faq-page::after {
   background-repeat: no-repeat;
   display: inline-block;
   right: 0.5rem;
-  top: 0.19rem;
   border-radius: 50%;
   width: 2.2rem;
   padding: 2.2rem;
@@ -630,11 +637,6 @@ section.footer .footer__content p {
     right: 2rem;
   }
 }
-@media (width < 1200px) {
-  .editor__texts p {
-    max-width: unset !important;
-  }
-}
 @media (width < 1100px) {
   .steps__showcase {
     display: none !important;
@@ -648,7 +650,7 @@ section.footer .footer__content p {
   h4.faq-page::after {
     top: -0.2rem;
   }
-  section.editor {
+  section.text-image {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   section.user-stories {
@@ -668,7 +670,7 @@ section.footer .footer__content p {
 }
 @media (width < 520px) {
   .inline-margin,
-  .editor-container {
+  .text-image-container {
     max-width: calc(100% - 2rem) !important;
     width: calc(100% - 2rem) !important;
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)) !important;

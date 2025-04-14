@@ -536,12 +536,13 @@ section.text-image {
     align-items: center;
     gap: 2.7rem;
     margin-top: 4rem;
+    max-width: $content-width;
     .text-image__texts {
       h2 {
         max-width: 17ch;
       }
       p {
-        font-size: clamp(0.9rem, 0.7rem + 0.5068vw, 1.55rem);
+        font-size: clamp(1.25rem, 0.7rem + 0.5068vw, 1.55rem);
         max-width: 43ch;
       }
     }
@@ -594,6 +595,7 @@ section.questions {
         margin-top: 1.7rem;
       }
       h4.faq-page::after {
+        $space: 2.2rem;
         content: '';
         transition: ease-in-out 0.2s;
         position: absolute;
@@ -603,10 +605,10 @@ section.questions {
         display: inline-block;
         right: 0.5rem;
         border-radius: 50%;
-        width: 2.2rem;
-        padding: 2.2rem;
+        width: $space;
+        padding: $space;
         scale: 0.6;
-        height: 2.2rem;
+        height: $space;
         aspect-ratio: 1;
       }
       h4.faq-page:hover::after {

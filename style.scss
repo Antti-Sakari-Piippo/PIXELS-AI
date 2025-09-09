@@ -47,7 +47,7 @@ script {
 }
 
 .col {
-  height: 100%;
+  block-size: 100%;
 }
 
 .col-item {
@@ -195,8 +195,8 @@ svg,
 image {
   display: block;
   object-fit: contain;
-  max-width: 100%;
-  height: 100%;
+  max-inline-size: 100%;
+  block-size: 100%;
 }
 
 a {
@@ -208,12 +208,12 @@ a {
   &:before {
     content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
+    block-size: 2px;
+    inline-size: 0;
     bottom: 0;
     left: 0;
     background-color: $gradient-color-1;
-    transition: width 0.3s ease;
+    transition: inline-size 0.3s ease;
   }
   &:hover,
   &:focus-within {
@@ -222,7 +222,7 @@ a {
   }
   &:hover:before,
   &:focus-within:before {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
@@ -284,7 +284,7 @@ picture,
 svg,
 video {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: cover;
 }
 
@@ -292,8 +292,8 @@ video {
 .bg {
   &::before {
     content: '';
-    width: 100%;
-    height: 197%;
+    inline-size: 100%;
+    block-size: 197%;
     position: absolute;
     inset: 0;
     background: url(images/ladyOfTheLake.webp);
@@ -361,8 +361,8 @@ video {
           .steps__points__step {
             .steps__points__ball {
               position: relative;
-              height: 9px;
-              width: 9px;
+              block-size: 9px;
+              inline-size: 9px;
               aspect-ratio: 1;
               background-color: $bg-color2;
               top: 25px;
@@ -374,12 +374,12 @@ video {
               border: none;
               border-block-start: 5px dotted white;
               color: #fff;
-              width: 103px;
+              inline-size: 103px;
               transform: rotate(90deg);
               left: -43px;
               position: relative;
               top: 87px;
-              height: 100%;
+              block-size: 100%;
             }
             .steps__points__step__content {
               $padding-inline-start: 2rem;
@@ -470,7 +470,7 @@ section.user-stories {
         gap: 0.7rem;
         border-radius: 0 0 $__border-rad $__border-rad;
         img {
-          width: 20%;
+          inline-size: 20%;
           aspect-ratio: 1;
           object-fit: contain;
         }
@@ -514,8 +514,8 @@ section.hero {
     display: grid;
     img.hero__bg__img {
       user-select: none;
-      min-height: 25rem;
-      width: 100vw;
+      min-block-size: 25rem;
+      inline-size: 100vw;
     }
   }
 }
@@ -605,10 +605,10 @@ section.questions {
         display: inline-block;
         right: 0.5rem;
         border-radius: 50%;
-        width: $space;
+        inline-size: $space;
         padding: $space;
         scale: 0.6;
-        height: $space;
+        block-size: $space;
         aspect-ratio: 1;
       }
       h4.faq-page:hover::after {
@@ -638,7 +638,7 @@ section.footer {
     width: $content-width;
     max-width: $content-width-low;
     img {
-      width: 16px;
+      inline-size: 16px;
       margin-top: 0.5rem;
       object-fit: contain;
     }
@@ -668,7 +668,7 @@ section.footer {
     padding: 2.2rem 0;
     position: absolute;
     right: -300px;
-    width: 300px;
+    inline-size: 300px;
     background-color: rgba($color: $menu-color, $alpha: 0.9);
     flex-direction: column;
     transition: right 0.3s;
@@ -728,8 +728,8 @@ section.footer {
 @media (width < 520px) {
   .inline-margin,
   .text-image-container {
-    max-width: calc(100% - 2rem) !important;
-    width: calc(100% - 2rem) !important;
+    max-inline-size: calc(100% - 2rem) !important;
+    inline-size: calc(100% - 2rem) !important;
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)) !important;
   }
 }
@@ -743,7 +743,7 @@ section.footer {
 // Scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  inline-size: 10px;
 }
 
 /* Track */
